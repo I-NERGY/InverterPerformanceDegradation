@@ -12,9 +12,6 @@ To solve the large errors from detecting periods with faulty performance i.e., d
 An illustration of this approach is shown in the figure below, where 
 `k_1 `, `k_2  ... k_n` are different time-windows used in training the model.
 
-```math
-SE = \frac{\sigma}{\sqrt{n}}
-```
 
 
 <img
