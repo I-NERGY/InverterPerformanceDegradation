@@ -14,7 +14,7 @@ To solve the large errors from detecting periods with faulty performance i.e., d
   src="stacked_models.png"
   alt="Alt text"
   title="Meta model"
-  style="display: inline-block; margin: 0 auto; max-width: 10px; max-length: 10px">
+  style="display: inline-block; margin: 0 auto; max-width: 5px">
 
 
 The scripts were implemented in tensorflow.
