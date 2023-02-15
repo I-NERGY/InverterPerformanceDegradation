@@ -11,7 +11,7 @@ To solve the large errors from detecting periods with faulty performance i.e., d
 
 An illustration of this approach is shown in the figure below, where 
 $ `k_1 `$ are different time-windows used in training the model.
-```k1 and k2 are 
+
 ```math
 SE = \frac{\sigma}{\sqrt{n}}
 ```
