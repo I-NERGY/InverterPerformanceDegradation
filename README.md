@@ -10,7 +10,7 @@ The inference file accepts a csv file with 14 observations, with the performance
 To solve the large errors from detecting periods with faulty performance i.e., degrading trends not found in training data, the LSTM models are stacked and different time intervals inputs (1, and two weeks prior) are used in training.  The outputs of the models are combined based on attention values learnt in training. Altogether, these components are trained end-to-end.
 
 An illustration of this approach is shown in the figure below, where 
-`k_1 ` and `k_2  ... k_n` are different time-windows used in training the model.
+`k_1 `, `k_2  ... k_n` are different time-windows used in training the model.
 
 ```math
 SE = \frac{\sigma}{\sqrt{n}}
@@ -24,7 +24,7 @@ SE = \frac{\sigma}{\sqrt{n}}
   style="display: inline-block; margin: 0 auto; max-width: 5px">
 
 
-The scripts were implemented in tensorflow.
+The model was implemented in tensorflow.
 
 
 To run:
