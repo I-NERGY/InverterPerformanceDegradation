@@ -9,13 +9,12 @@ The inference file accepts a csv file with 14 observations, with the performance
 
 To solve the large errors from detecting periods with faulty performance i.e., degrading trends not found in training data, the LSTM models are stacked and different time intervals inputs (1, and two weeks prior) are used in training.  The outputs of the models are combined based on attention values learnt in training. Altogether, these components are trained end-to-end.
 
-[ ![My Image](stacked_models.png) ] ::
 
 <img
   src="stacked_models.png"
   alt="Alt text"
   title="Meta model"
-  style="display: inline-block; margin: 0 auto; max-width: 80px">
+  style="display: inline-block; margin: 0 auto; max-width: 40px">
 
 
 The scripts were implemented in tensorflow.
