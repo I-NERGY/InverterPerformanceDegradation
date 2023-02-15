@@ -11,6 +11,12 @@ To solve the large errors from detecting periods with faulty performance i.e., d
 
 ![My Image](stacked_models.png)
 
+<img
+  src="stacked_models.png"
+  alt="Alt text"
+  title="Meta model"
+  style="display: inline-block; margin: 0 auto; max-width: 80px">
+
 
 The scripts were implemented in tensorflow.
 
