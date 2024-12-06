@@ -8,6 +8,9 @@ import pandas as pd
 
 from tensorflow.keras.models import load_model
 
+def scalerTransform(data):
+  trans = load(SCALER_PATH)
+  return trans.transform(data)
 
 def gen_window(df):
     # split data into 7-day sequences
@@ -22,7 +25,7 @@ def gen_window(df):
         # suppress the SettingWithCopyWarning from pandas
         pd.options.mode.chained_assignment = None
 
-        df.loc[:, cc[-(len(cc) - 1):]] = trans.transform(np.array(df[cc[-(len(cc) - 1):]]))
+        df.loc[:, cc[-(len(cc) - 1):]] = scalerTransform(np.array(df[cc[-(len(cc) - 1):]]))
         df.loc[:, cc[0]] = df.loc[:, cc[0]].values / 100
 
         df = array(split(df, len(df) // 7))
@@ -50,7 +53,6 @@ def gen_forecast(test_df, train_weeks=(1, 2, 3)):
     output = model.predict(test_data)
     output *= 100
     print("\n performance ratio forcast: ", output.flatten().tolist())
-
 
 if __name__ == '__main__':
     TEST_PATH = "./test.csv"
